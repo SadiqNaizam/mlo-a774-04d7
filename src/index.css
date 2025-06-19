@@ -4,91 +4,88 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Palette - Light Mode */
+    --background: 220 14% 96%; /* #F3F4F6 */
+    --foreground: 215 14% 47%; /* #6B7280 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 55%;    /* Darker #3B82F6 for AA contrast */
+    --primary-foreground: 210 40% 98%; /* White */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 16% 90%;   /* #DEE2E6 */
+    --secondary-foreground: 215 25% 30%; /* Darker Gray Text #3D4552 */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 16% 93%;       /* #E9ECEF */
+    --muted-foreground: 215 15% 35%; /* #4A515C */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 145 77% 42%;      /* Green #10B981 */
+    --accent-foreground: 145 100% 5%; /* Very Dark Green Text */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 350 87% 60%;  /* Red #EF4444 */
+    --destructive-foreground: 210 40% 98%; /* White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 88%;      /* #DDE1E6 */
+    --input: 220 13% 88%;       /* #DDE1E6 */
+    --ring: 145 77% 42%;        /* Accent Green for focus */
 
-    --radius: 0.5rem;
+    /* Corner Rounding */
+    --radius: 0.375rem; /* 6px */
 
-    --sidebar-background: 0 0% 98%;
+    /* Typography */
+    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Theming (aliased to main theme) */
+    --sidebar-background: var(--background);
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Core Palette - Dark Mode */
+    --background: 215 28% 17%; /* #1F2937 */
+    --foreground: 220 14% 96%; /* #F3F4F6 */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 91% 70%;    /* Lighter Blue */
+    --primary-foreground: 215 28% 10%; /* Very Dark Blue/Black for text on Lighter Blue */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 28% 25%;   /* #333E4F */
+    --secondary-foreground: 220 15% 80%; /* Light Gray Text #C1C8D4 */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 25% 22%;       /* #2A3340 */
+    --muted-foreground: 220 15% 70%; /* #A8B0BD */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 145 77% 52%;      /* Lighter Green */
+    --accent-foreground: 145 100% 8%; /* Very Dark Green Text */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 350 77% 70%;  /* Lighter Red */
+    --destructive-foreground: 350 87% 15%; /* Very Dark Red Text */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 215 28% 25%;      /* #333E4F */
+    --input: 215 28% 25%;       /* #333E4F */
+    --ring: 145 77% 52%;        /* Dark Mode Accent Green for focus */
+
+    /* Sidebar Theming (aliased to main theme) - inherits dark mode vars */
+    /* No need to redefine aliases if they correctly point to main theme variables which change for .dark */
   }
 }
+
+/* Removed custom .font-body and .font-heading utilities */
 
 @layer base {
   * {
@@ -96,6 +93,10 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans; /* Apply new base font */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans; /* Apply new base font to headings */
   }
 }
