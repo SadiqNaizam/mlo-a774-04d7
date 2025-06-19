@@ -52,7 +52,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
+				sidebar: { // These will now reflect the main theme due to CSS aliasing
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
 					primary: 'hsl(var(--sidebar-primary))',
@@ -64,10 +64,13 @@ export default {
 				}
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				lg: 'var(--radius)', /* 0.375rem (6px) */
+				md: 'calc(var(--radius) - 2px)', /* 4px */
+				sm: 'calc(var(--radius) - 4px)'  /* 2px */
 			},
+			fontFamily: {
+        sans: ['var(--font-sans)'], // Use 'Inter' as the base sans-serif font
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
